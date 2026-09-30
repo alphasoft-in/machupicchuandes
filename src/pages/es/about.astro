@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AppNav from '../../components/AppNav';
+import AppFooter from '../../components/AppFooter';
+---
+
+<Layout title="Nosotros | Machu Picchu Andes Marathon" lang="es">
+  <AppNav lang="es" currentPath="/es/about" switchUrl="/en/about" client:load />
+  
+  <main class="bg-white overflow-x-hidden">
+    <!-- Hero Section -->
+    <div class="relative h-[60vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden bg-[#01324c]">
+      <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=2000&q=80" alt="Montañas de los Andes" class="absolute inset-0 w-full h-full object-cover opacity-80" />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#01324c]/80 via-[#0b3d59]/50 to-[#01324c]/90"></div>
+      
+      <div class="relative z-10 px-6 max-w-5xl mx-auto w-full text-center flex flex-col items-center mt-16">
+        <span class="inline-block py-1.5 px-4 mb-6 rounded-full bg-amber-500/20 text-amber-400 font-outfit font-bold tracking-widest uppercase text-xs sm:text-sm border border-amber-500/30 backdrop-blur-md shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+          Empresa 100% Local Cusqueña
+        </span>
+        <h1 class="font-outfit font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight tracking-tight drop-shadow-2xl max-w-4xl mb-6">
+          Nacidos en los Andes
+        </h1>
+        <p class="font-sans text-lg md:text-xl text-slate-200 font-light max-w-2xl mx-auto drop-shadow-md">
+          No somos una agencia intermediaria. Somos los operadores directos, guías de montaña y cusqueños nativos que te llevarán a la cumbre.
+        </p>
+      </div>
+    </div>
+
+    <!-- Our Story -->
+    <section class="py-12 lg:py-24 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-amber-500/10 rounded-[3rem] transform -rotate-3"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1541296604437-8cb5efd2da96?auto=format&fit=crop&w=1000&q=80" 
+              alt="Guías de Montaña" 
+              class="relative rounded-[2rem] shadow-2xl object-cover h-[350px] md:h-[500px] w-full"
+            />
+            <div class="absolute -bottom-8 -right-8 bg-[#01324c] p-8 rounded-3xl shadow-xl hidden md:block">
+              <span class="block font-outfit font-black text-5xl text-amber-500 mb-1">15+</span>
+              <span class="text-white text-sm font-bold uppercase tracking-wider">Años de Experiencia</span>
+            </div>
+          </div>
+          
+          <div class="text-center lg:text-left mt-8 lg:mt-0">
+            <h2 class="font-outfit font-black text-2xl sm:text-3xl md:text-4xl text-[#01324c] mb-4 lg:mb-6">Diseñando Obras Maestras de Alta Montaña</h2>
+            <div class="space-y-4 font-sans text-slate-600 leading-relaxed text-base md:text-lg font-light">
+              <p>
+                Machu Picchu Andes Marathon nació de una idea simple pero poderosa: <strong class="font-bold text-slate-900">El montañismo debe ser ético, excepcional y directo.</strong>
+              </p>
+              <p>
+                Durante décadas, corporaciones internacionales han actuado como intermediarios, vendiendo tours con altos recargos mientras exprimen a los operadores locales y porteadores que hacen el trabajo duro. Nosotros decidimos cambiar las reglas.
+              </p>
+              <p>
+                Como descendientes nativos de los Incas, operamos el 100% de nuestras expediciones directamente. Cuando reservas con nosotros, tu inversión se destina directamente a equipos de primera calidad, chefs gourmet, guías de élite y a nuestro revolucionario <a href="/es/ayni-project" class="text-amber-500 font-bold hover:underline">Proyecto Ayni Sherpa</a>.
+              </p>
+            </div>
+            
+            <div class="mt-8 grid grid-cols-2 gap-8 border-t border-slate-100 pt-8">
+              <div>
+                <h4 class="font-outfit font-bold text-2xl text-slate-900 mb-1">0%</h4>
+                <p class="text-sm text-slate-500 uppercase tracking-wide font-bold">Intermediarios</p>
+              </div>
+              <div>
+                <h4 class="font-outfit font-bold text-2xl text-slate-900 mb-1">10k+</h4>
+                <p class="text-sm text-slate-500 uppercase tracking-wide font-bold">Aventureros Guiados</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Grid -->
+    <section class="py-12 lg:py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-10 lg:mb-16">
+          <h2 class="font-outfit font-black text-2xl sm:text-3xl md:text-4xl text-[#01324c] mb-4 lg:mb-6">La Diferencia Machu Picchu Andes Marathon</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
+            <div class="w-14 h-14 bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-500 mb-6">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            </div>
+            <h3 class="font-outfit font-bold text-xl text-slate-900 mb-3">Licencia Oficial</h3>
+            <p class="text-slate-600 font-light text-sm leading-relaxed">Totalmente autorizados por el Gobierno Peruano (DIRCETUR) para operar el Camino Inca y rutas de alta montaña.</p>
+          </div>
+          
+          <div class="bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
+            <div class="w-14 h-14 bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-500 mb-6">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path></svg>
+            </div>
+            <h3 class="font-outfit font-bold text-xl text-slate-900 mb-3">Comida Gourmet de Expedición</h3>
+            <p class="text-slate-600 font-light text-sm leading-relaxed">Nuestros chefs de élite preparan comidas estilo buffet en la montaña. Adaptamos el menú a dietas veganas, vegetarianas y sin gluten sin problema.</p>
+          </div>
+
+          <div class="bg-white p-10 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
+            <div class="w-14 h-14 bg-amber-500/10 rounded-2xl flex items-center justify-center text-amber-500 mb-6">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            </div>
+            <h3 class="font-outfit font-bold text-xl text-slate-900 mb-3">Grupos Privados de Élite</h3>
+            <p class="text-slate-600 font-light text-sm leading-relaxed">Mantenemos grupos reducidos (2-8 personas máx). Tu guía se enfoca enteramente en tu ritmo, seguridad y experiencia de aprendizaje.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 md:py-24 bg-[#01324c] text-center px-4 relative overflow-hidden">
+      <div class="absolute inset-0 bg-amber-500/5 mix-blend-overlay"></div>
+      <div class="relative z-10 max-w-3xl mx-auto">
+        <h2 class="font-outfit font-black text-2xl sm:text-3xl md:text-4xl text-white mb-6">¿Listo para subir con los expertos?</h2>
+        <p class="text-slate-300 mb-10 text-base md:text-lg font-light">Únete a los miles que han elegido el camino auténtico y ético hacia Machu Picchu.</p>
+        <a href="/es/#tours" class="inline-block px-6 py-3.5 md:px-10 md:py-5 bg-amber-500 hover:bg-amber-400 text-slate-900 font-outfit font-extrabold uppercase text-xs md:text-sm tracking-wider md:tracking-widest rounded-xl transition-all shadow-[0_0_30px_rgba(245,158,11,0.3)] hover:shadow-[0_0_50px_rgba(245,158,11,0.5)] hover:-translate-y-1 whitespace-nowrap">
+          Explorar Expediciones
+        </a>
+      </div>
+    </section>
+
+  </main>
+  
+  <AppFooter lang="es" client:visible />
+</Layout>

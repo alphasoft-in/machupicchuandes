@@ -1,0 +1,36 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import AppNav from '../../../components/AppNav';
+import AppFooter from '../../../components/AppFooter';
+---
+
+<Layout title="Camino Inca | Machu Picchu Andes Marathon" lang="es">
+  <AppNav lang="es" currentPath="/es/tours/inca-trail" switchUrl="/en/tours/inca-trail" client:load />
+  
+  <main class="bg-[#fcfcfb] min-h-screen">
+    <!-- Hero Section for Tour -->
+    <section class="relative h-[60vh] min-h-[400px] w-full flex flex-col items-center justify-center overflow-hidden bg-slate-900">
+      <div 
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=2000&q=80')"
+      ></div>
+      <div class="absolute inset-0 bg-black/50"></div>
+      
+      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+        <span class="inline-block py-1.5 px-4 mb-4 rounded-full bg-amber-500/20 text-amber-400 font-outfit font-bold tracking-widest uppercase text-sm border border-amber-500/30 backdrop-blur-md">
+          Trek Clásico
+        </span>
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-outfit font-black text-white mb-6 drop-shadow-lg">Camino Inca</h1>
+        <p class="text-xl md:text-2xl text-slate-200 font-light drop-shadow-md">La ruta clásica y más famosa hacia Machu Picchu.</p>
+      </div>
+    </section>
+
+    <!-- Tour Details Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <h2 class="text-3xl font-outfit font-bold text-slate-900 mb-8">Resumen del Tour</h2>
+      <p class="text-lg text-slate-600">El contenido del Camino Inca irá aquí...</p>
+    </div>
+  </main>
+
+  <AppFooter lang="es" />
+</Layout>

@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AppNav from '../../components/AppNav';
+import AppFooter from '../../components/AppFooter';
+import ToursList from '../../components/ToursList';
+import HeroSlider from '../../components/HeroSlider';
+---
+
+<Layout title="Machu Picchu Andes Marathon | The Ultimate High Altitude Experience" lang="en">
+  <AppNav lang="en" currentPath="/en/" switchUrl="/es/" client:load />
+  
+  <main class="flex-grow bg-[#fcfcfb]">
+    <!-- Epic Hero Section with Video/Image Background -->
+    <HeroSlider lang="en" client:load />
+
+    <!-- Value Proposition -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="font-outfit font-black text-3xl sm:text-5xl text-slate-900 mb-4">The Premium Standard</h2>
+          <p class="font-sans text-slate-600">We don't cut corners. From our Eureka glamping tents to our elite gourmet chefs, every detail of your expedition is crafted for excellence.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow text-center">
+            <div class="w-16 h-16 bg-[#0b3d59] rounded-2xl flex items-center justify-center mx-auto mb-6 text-amber-400">
+              <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+            <h3 class="font-outfit font-black text-xl text-slate-900 mb-3">Eureka Glamping Tents</h3>
+            <p class="text-slate-600 text-sm">Sleep comfortably in 4-season Eureka tents with thick foam mattresses. We prioritize your rest at high altitudes.</p>
+          </div>
+          <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow text-center">
+            <div class="w-16 h-16 bg-[#0b3d59] rounded-2xl flex items-center justify-center mx-auto mb-6 text-amber-400">
+              <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h3 class="font-outfit font-black text-xl text-slate-900 mb-3">Guaranteed Departures</h3>
+            <p class="text-slate-600 text-sm">As direct operators, we don't rely on pooling clients with other agencies. Once you book, your trek is 100% guaranteed.</p>
+          </div>
+          <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow text-center">
+            <div class="w-16 h-16 bg-[#0b3d59] rounded-2xl flex items-center justify-center mx-auto mb-6 text-amber-400">
+              <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="font-outfit font-black text-xl text-slate-900 mb-3">The Ayni Project</h3>
+            <p class="text-slate-600 text-sm">We pay our porters the highest wages in the region, provide them with health insurance, and strict 14kg weight limits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tours Section -->
+    <div id="tours">
+      <ToursList lang="en" client:visible />
+    </div>
+
+    <!-- Trust Section -->
+    <section class="py-20 bg-[#01324c] border-t border-[#166797]">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="font-outfit font-black text-3xl sm:text-4xl text-white mb-10">Approved by the Best</h2>
+        <div class="flex flex-wrap justify-center items-center gap-12 opacity-80">
+          <div class="flex flex-col items-center">
+            <div class="relative h-12 w-40 mb-2">
+              <!-- Búho original (Mitad superior) -->
+              <img src="/images/tripadvisor.png" alt="Tripadvisor" class="absolute inset-0 w-full h-full object-contain" style="clip-path: inset(0 0 45% 0);" />
+              <!-- Texto invertido a blanco (Mitad inferior) -->
+              <img src="/images/tripadvisor.png" alt="" class="absolute inset-0 w-full h-full object-contain invert brightness-0" style="clip-path: inset(55% 0 0 0);" />
+            </div>
+            <div class="flex text-[#00af87] text-2xl">★★★★★</div>
+            <span class="text-white text-xs mt-2">Certificate of Excellence</span>
+          </div>
+          <div class="h-16 w-px bg-white/20 hidden md:block"></div>
+          <div class="flex flex-col items-center">
+            <img src="/images/logo-dircetur.png" alt="DIRCETUR" class="h-14 object-contain invert brightness-0" />
+            <span class="text-white text-xs mt-3">Official Licensed Operator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <AppFooter lang="en" client:visible />
+</Layout>

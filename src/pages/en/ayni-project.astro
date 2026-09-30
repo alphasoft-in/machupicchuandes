@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AppNav from '../../components/AppNav';
+import AppFooter from '../../components/AppFooter';
+---
+
+<Layout title="The Ayni Project | Machu Picchu Andes Marathon" lang="en">
+  <AppNav lang="en" currentPath="/en/ayni-project" switchUrl="/es/ayni-project" client:load />
+  
+  <main class="bg-white">
+    <!-- Hero Section -->
+    <div class="relative h-[60vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden bg-[#01324c]">
+      <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=2000&q=80" alt="Machu Picchu Andes" class="absolute inset-0 w-full h-full object-cover opacity-80" />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#01324c]/80 via-[#0b3d59]/50 to-[#01324c]/90"></div>
+      
+      <div class="relative z-10 px-6 max-w-5xl mx-auto w-full text-center flex flex-col items-center mt-16">
+        <span class="inline-block py-1.5 px-4 mb-6 rounded-full bg-amber-500/20 text-amber-400 font-outfit font-bold tracking-widest uppercase text-xs sm:text-sm border border-amber-500/30 backdrop-blur-md shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+          Native Sherpa Dignity Pledge & Direct Impact
+        </span>
+        <h1 class="font-outfit font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight tracking-tight drop-shadow-2xl max-w-4xl mb-6">
+          The Ayni Dignity Manifesto
+        </h1>
+        <p class="font-sans text-lg md:text-xl text-slate-200 font-light max-w-2xl mx-auto drop-shadow-md">
+          Ayni is an ancient Quechua principle meaning mutual reciprocity. When you travel direct with us, you empower native mountain families directly without exploitative middlemen.
+        </p>
+      </div>
+    </div>
+
+    <!-- Project Details -->
+    <section class="py-12 lg:py-24 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div class="text-center lg:text-left">
+            <h2 class="font-outfit font-black text-2xl sm:text-3xl md:text-4xl text-[#01324c] mb-4 lg:mb-6">Our Philosophy</h2>
+            <div class="space-y-4 font-sans text-slate-600 leading-relaxed text-base md:text-lg font-light">
+              <p>
+                Official licensed direct mountaineering operator based in Cusco, Peru. We design high-altitude private adventures and glamping tours while ensuring fair wages and dignity for our native porters through the Ayni Philosophy.
+              </p>
+              <p>
+                When you reserve directly with us, you receive official DIRCETUR permits, guaranteed departures, and the peace of mind knowing your travel supports authentic Andean communities.
+              </p>
+            </div>
+            
+            <div class="mt-12 bg-amber-50 p-8 rounded-3xl border border-amber-100">
+              <h3 class="font-outfit font-bold text-2xl text-amber-700 mb-4">Join Our Responsible Expeditions</h3>
+              <p class="text-slate-700">
+                Speak instantly with our experienced mountaineering coordinators in Cusco for immediate itinerary customization and permit verification.
+              </p>
+            </div>
+          </div>
+          
+          <div class="space-y-8">
+            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+              <h3 class="font-outfit font-bold text-2xl text-slate-900 mb-3">Direct Cusco Ownership</h3>
+              <p class="text-slate-600 font-light">Every cent invested in your trek stays in Cusco to fund educational grants and agricultural infrastructure for Andean high-mountain villages.</p>
+            </div>
+
+            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+              <h3 class="font-outfit font-bold text-2xl text-slate-900 mb-3">Above-Market Compensation</h3>
+              <p class="text-slate-600 font-light">We compensate our native high-altitude sherpas well above standard minimums, providing full medical accident insurance and thermal clothing.</p>
+            </div>
+
+            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+              <h3 class="font-outfit font-bold text-2xl text-slate-900 mb-3">Equal Comfort Under Stars</h3>
+              <p class="text-slate-600 font-light">Our team travels with lightweight, ergonomic backpacks and weatherproof equipment to protect their physical wellbeing across extreme 4,600m mountain passes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <AppFooter lang="en" client:visible />
+</Layout>

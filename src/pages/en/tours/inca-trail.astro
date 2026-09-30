@@ -1,0 +1,76 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import AppNav from '../../../components/AppNav';
+import AppFooter from '../../../components/AppFooter';
+import TourItinerary from '../../../components/TourItinerary';
+
+const itineraryData = [
+  {
+    day: 1,
+    title: "Cusco - KM 82 - Wayllabamba",
+    details: "We pick you up from your hotel in Cusco and drive to KM 82, the official start of the Inca Trail. From here, we hike along the Urubamba River, enjoying views of the snow-capped Veronica mountain before arriving at our first luxury campsite in Wayllabamba.",
+    highlights: ["Gourmet welcome lunch", "Views of Mt. Veronica", "Eureka glamping tents"]
+  },
+  {
+    day: 2,
+    title: "Wayllabamba - Dead Woman's Pass - Pacaymayo",
+    details: "Today is the most challenging and rewarding day. We ascend to Warmiwañusca (Dead Woman's Pass) at 4,215m (13,828ft), the highest point of the trek. Our elite sherpas and chefs will be waiting with hot drinks and a spectacular lunch before we descend to the Pacaymayo valley.",
+    highlights: ["Conquering the highest pass", "Cloud forest ecosystems", "Hot massage at camp"]
+  },
+  {
+    day: 3,
+    title: "Pacaymayo - Phuyupatamarca - Wiñay Wayna",
+    details: "The most beautiful day on the trail. We visit several impressive Inca archaeological sites including Runkurakay, Sayacmarca, and Phuyupatamarca. We finally arrive at Wiñay Wayna (Forever Young), an incredible complex of terraces overlooking the Urubamba river.",
+    highlights: ["Explore 3 major Inca ruins", "Orchid spotting", "Spectacular sunset views"]
+  },
+  {
+    day: 4,
+    title: "Wiñay Wayna - Sun Gate - Machu Picchu",
+    details: "We wake up very early to reach Inti Punku (The Sun Gate) before sunrise. Watching the first rays of light illuminate the lost city of Machu Picchu is an unforgettable experience. After a private guided tour of the citadel, we descend to Aguas Calientes and take the panoramic train back to Cusco.",
+    highlights: ["Sunrise at the Sun Gate", "Private Machu Picchu tour", "Vistadome Panoramic Train"]
+  }
+];
+---
+
+<Layout title="Inca Trail | Machu Picchu Andes Marathon" lang="en">
+  <AppNav lang="en" currentPath="/en/tours/inca-trail" switchUrl="/es/tours/inca-trail" client:load />
+  
+  <main class="bg-[#fcfcfb] min-h-screen">
+    <!-- Hero Section for Tour -->
+    <section class="relative w-full flex flex-col items-center justify-center overflow-hidden bg-[#01324c]" style="height: 70vh; min-height: 500px;">
+      <div 
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=2000&q=80')"
+      ></div>
+      
+      <!-- Gradient overlay specifically for making the navbar pop and text legible -->
+      <div class="absolute inset-0 bg-gradient-to-b from-[#01324c] via-transparent to-[#01324c]/80 opacity-90"></div>
+      
+      <div class="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl mx-auto" style="margin-top: 80px;">
+        <div class="mb-4">
+          <span class="inline-block py-2 px-6 rounded-full bg-amber-500/20 text-amber-400 font-outfit font-bold tracking-widest uppercase text-sm border border-amber-500/30 backdrop-blur-md">
+            Classic Trek
+          </span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-outfit font-black text-white mb-6" style="text-shadow: 0 4px 20px rgba(0,0,0,0.6);">
+          Inca Trail
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-200 font-light max-w-2xl mx-auto" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+          The classic and most famous trek to Machu Picchu.
+        </p>
+      </div>
+    </section>
+
+    <!-- Tour Details Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-4xl font-outfit font-black text-slate-900 mb-6">4 Days / 3 Nights Itinerary</h2>
+        <p class="text-lg text-slate-600">Experience the magic of the Andes with our signature high-altitude service. Every step is curated for excellence.</p>
+      </div>
+      
+      <TourItinerary client:load days={itineraryData} lang="en" />
+    </div>
+  </main>
+
+  <AppFooter lang="en" />
+</Layout>

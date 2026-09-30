@@ -1,0 +1,130 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AppNav from '../../components/AppNav';
+import AppFooter from '../../components/AppFooter';
+import { tours } from '../../data/tours';
+---
+
+<Layout title="Contacto | Machu Picchu Andes Marathon" lang="es">
+  <AppNav lang="es" currentPath="/es/contact" switchUrl="/en/contact" client:load />
+  
+  <main class="bg-[#fcfcfb] min-h-screen">
+    <!-- Hero Section -->
+    <div class="relative h-[60vh] min-h-[500px] w-full flex items-center justify-center overflow-hidden bg-[#01324c]">
+      <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=2000&q=80" alt="Machu Picchu Andes" class="absolute inset-0 w-full h-full object-cover opacity-80" />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#01324c]/80 via-[#0b3d59]/50 to-[#01324c]/90"></div>
+      
+      <div class="relative z-10 px-6 max-w-5xl mx-auto w-full text-center flex flex-col items-center mt-16">
+        <span class="inline-block py-1.5 px-4 mb-6 rounded-full bg-amber-500/20 text-amber-400 font-outfit font-bold tracking-widest uppercase text-xs sm:text-sm border border-amber-500/30 backdrop-blur-md shadow-[0_0_15px_rgba(245,158,11,0.2)]">
+          Comunícate con Nosotros
+        </span>
+        <h1 class="font-outfit font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight tracking-tight drop-shadow-2xl max-w-4xl mb-6">
+          Contactar Asesor
+        </h1>
+        <p class="font-sans text-lg md:text-xl text-slate-200 font-light max-w-2xl mx-auto drop-shadow-md">
+          Nuestros expertos en viajes están listos para diseñar tu aventura perfecta de alta montaña.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Form & Details -->
+    <section class="py-12 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          
+          <!-- Form -->
+          <div class="bg-white p-8 md:p-12 rounded-3xl shadow-[0_10px_50px_rgba(0,0,0,0.05)] border border-slate-100">
+            <h3 class="text-xl sm:text-2xl font-outfit font-black text-slate-900 mb-6 md:mb-8">Envíanos un Mensaje</h3>
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-semibold text-slate-700 mb-2">Nombre</label>
+                  <input type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all" placeholder="Juan" />
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-slate-700 mb-2">Apellido</label>
+                  <input type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all" placeholder="Pérez" />
+                </div>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Correo Electrónico</label>
+                <input type="email" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all" placeholder="juan@ejemplo.com" />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Expedición de Interés</label>
+                <div class="relative">
+                  <select class="appearance-none truncate w-full pl-4 pr-12 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all bg-white text-sm sm:text-base">
+                    <option value="" disabled selected>Selecciona una expedición...</option>
+                    {tours.es.map(tour => {
+                      let shortTitle = tour.title.replace(' a Machu Picchu', '').replace(' Perú', '');
+                      if (shortTitle.length > 38) shortTitle = shortTitle.substring(0, 35) + '...';
+                      return <option value={tour.title}>{shortTitle}</option>
+                    })}
+                    <option value="Itinerario Personalizado">Itinerario Personalizado</option>
+                  </select>
+                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-sm font-semibold text-slate-700 mb-2">Mensaje</label>
+                <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all" placeholder="Cuéntanos sobre tu viaje soñado..."></textarea>
+              </div>
+
+              <button type="button" class="w-full py-3 bg-amber-500 hover:bg-amber-600 text-white font-outfit font-extrabold uppercase tracking-wider rounded-xl transition-all shadow-lg shadow-amber-500/30">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+
+          <!-- Info -->
+          <div class="flex flex-col lg:pt-12">
+            <h3 class="text-xl sm:text-2xl font-outfit font-black text-slate-900 mb-6 md:mb-8 mt-8 lg:mt-0">Oficina Directa en Cusco</h3>
+            <p class="text-base md:text-lg text-slate-600 mb-8 md:mb-10 leading-relaxed">
+              Evita los intermediarios. Al reservar directamente con nosotros, garantizas salarios justos para nuestros sherpas de élite y obtienes la experiencia más auténtica y premium en los Andes.
+            </p>
+
+            <div class="space-y-8">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 text-amber-600">
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-outfit font-bold text-slate-900 text-xl">Ubicación</h4>
+                  <p class="text-slate-600 mt-1">Centro Histórico de Cusco<br/>Reino de los Incas, Perú</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 text-amber-600">
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-outfit font-bold text-slate-900 text-xl">WhatsApp / Teléfono</h4>
+                  <p class="text-slate-600 mt-1"><a href="https://wa.me/51993187203" class="hover:text-amber-500 transition-colors">+51 993 187 203</a></p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 text-amber-600">
+                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-outfit font-bold text-slate-900 text-xl">Correo Electrónico</h4>
+                  <p class="text-slate-600 mt-1"><a href="mailto:info@machupicchuandes.com" class="hover:text-amber-500 transition-colors">info@machupicchuandes.com</a></p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <AppFooter lang="es" />
+</Layout>
