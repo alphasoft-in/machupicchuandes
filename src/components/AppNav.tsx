@@ -40,7 +40,7 @@ const dict = {
 
 const getToursByCategory = (lang: 'en' | 'es', catId: string) => {
   const all = tours[lang] || [];
-  let filtered = [];
+  let filtered: typeof all = [];
   if (catId === 'inca-trail') filtered = all.filter(t => t.id.includes('inca') && t.category !== 'VIP');
   else if (catId === 'salkantay') filtered = all.filter(t => (t.id.includes('salkantay') || t.id.includes('ausangate')) && t.category !== 'VIP');
   else if (catId === 'luxury') filtered = all.filter(t => t.category === 'VIP');
