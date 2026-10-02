@@ -55,7 +55,7 @@ export default function AppFooter({ lang }: { lang: 'en' | 'es' }) {
                 <span>✉️ info@machupicchuandes.com</span>
               </div>
               <div className="flex items-center gap-3 pt-3">
-                <a href="#" aria-label="Facebook" className="w-9 h-9 rounded-full bg-white/10 hover:bg-amber-500 hover:-translate-y-1 flex items-center justify-center transition-all">
+                <a href="https://www.facebook.com/andesmarathonmachupicchu" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-9 h-9 rounded-full bg-white/10 hover:bg-amber-500 hover:-translate-y-1 flex items-center justify-center transition-all">
                   <FaFacebookF className="w-4 h-4 text-white" />
                 </a>
                 <a href="#" aria-label="Instagram" className="w-9 h-9 rounded-full bg-white/10 hover:bg-amber-500 hover:-translate-y-1 flex items-center justify-center transition-all">
