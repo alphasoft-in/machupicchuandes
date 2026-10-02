@@ -78,8 +78,12 @@ export default function Navigation({ lang, currentPath, switchUrl }: NavProps) {
     <>
     <nav className={`fixed w-full z-50 transition-all duration-300 ${(scrolled || mobileMenuOpen) ? 'bg-white/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        <a href={`/${lang}`} className={`font-['Playfair_Display'] text-2xl font-bold tracking-widest ${(scrolled || mobileMenuOpen) ? 'text-gray-900' : 'text-white'}`}>
-          MPAM
+        <a href={`/${lang}`} className="flex items-center">
+          <img 
+            src="/images/logo machu picchu andes marathon.webp" 
+            alt="Machu Picchu Andes Marathon Logo" 
+            className={`h-12 w-auto transition-opacity duration-300 ${(scrolled || mobileMenuOpen) ? 'opacity-100' : 'opacity-90'}`}
+          />
         </a>
         
         {/* Desktop Menu */}
