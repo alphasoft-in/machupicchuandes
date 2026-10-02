@@ -75,7 +75,7 @@ export default function HeroSlider({ lang }: HeroSliderProps) {
             <div className="absolute inset-0 bg-gradient-to-b from-[#01324c]/80 via-[#0b3d59]/50 to-[#01324c]/90" />
             
             <div className={`relative z-10 text-center px-4 max-w-5xl mx-auto flex flex-col items-center h-full justify-center transition-all duration-1000 delay-300 ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <span className="inline-block py-1.5 px-4 mb-6 rounded-full bg-amber-500/20 text-amber-400 font-outfit font-bold tracking-widest uppercase text-xs sm:text-sm border border-amber-500/30 backdrop-blur-md">
+              <span className="inline-block py-1 px-3 mb-4 rounded-full bg-amber-500/20 text-amber-400 font-outfit font-bold tracking-widest uppercase text-[10px] sm:text-xs border border-amber-500/30 backdrop-blur-md">
                 {slide.tag}
               </span>
               <h1 
